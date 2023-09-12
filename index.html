@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+
+    <!-- style css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div id="container">
+        <section class="img-ilustrativa">
+            <img src="assets/ilustration.svg">
+        </section>
+
+        <div class="container-form">
+            <div class="txt-title">              
+                <h1>Calculadora - IMC</h1>
+            </div>
+
+            <label class="form">
+                <div class="txt-title-form">
+                    <span>Seu peso</span>
+                </div>
+                <div class="form-input">
+                    <span><i class="fa-solid fa-weight-hanging"></i></i></span>
+                    <input type="number" id="peso" required>
+                    <span>Kg</span>
+                </div>
+            </label>
+
+            <label class="form">
+                <div class="txt-title-form">
+                    <span>Sua altura</span>
+                </div>
+                <div class="form-input">
+                    <span><i class="fa-solid fa-ruler"></i></span>
+                    <input type="number" id="altura" required>
+                    <span>M</span>
+                </div>
+            </label>
+
+            <button id="calcular">Calcular</button>
+            <div class="resultado-linha">
+                <section>
+                    <span class="result"></span>     
+                    <span class="result-txt">Seu IMC</span>
+
+                    <div class="classificarText">
+                        <p class="classificar"></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            // Esta função será executada após a página ser totalmente carregada
+            document.querySelector('#altura').value = '';
+            document.querySelector('#peso').value = '';
+        });
+    </script>
+</body>
+</html>
